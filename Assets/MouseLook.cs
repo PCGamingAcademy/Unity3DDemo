@@ -38,7 +38,7 @@ public class MouseLook : MonoBehaviour {
 				transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityHor, 0);
 				break;
 			case RotationAxes.MouseY:
-				_rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert;
+				_rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert * -1;
 				_rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
 
 				rotationY = transform.localEulerAngles.y;
